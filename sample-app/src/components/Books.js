@@ -2,6 +2,7 @@ import React from 'react';
 import Book from './Book';
 
 const Books = ({books}) => {
+    // let val = "";
     return (
         <>
             <div>

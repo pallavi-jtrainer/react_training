@@ -4,6 +4,7 @@ import './App.css';
 import Books from './components/Books';
 import AddBook from './components/AddBook';
 import Searchbooks from './components/SearchBooks';
+import RegistrationPage from './components/RegisterPage';
 //import Navbar from './components/NavBar';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <div className='card-body'>
           <Books books={data}/>
           <AddBook setData={setData}/>
+          {/* <RegistrationPage/> */}
         </div>
       </div>
       {/* <Navbar/> */}

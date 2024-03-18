@@ -1,15 +1,26 @@
 import React from "react";
+// import Books from "./Books";
 
-const Searchbooks = ({books, setData}) => {
+const Searchbooks = ({books}) => {
+    const [filteredBooks, setFilteredBooks] = React.useState(books);
+
+    //const element = document.createElement("input")
+    // //console.log(element)
+    // element.id = "text1"
+    // element.type = "number"
+    // element.innerHTML = "Heading Demo"
+    //document.body.appendChild(element)
+
     function handleSearch(event) {
         event.preventDefault();
         const rate = event.target.elements.searchvalue.value;
 
-        setData(
-            books.filter((item) => {
-                return item.price >= rate
-            })
-        )
+        const filteredData = filteredBooks.filter((item) => {
+            return item.price >= rate
+        })
+        console.log(filteredData)
+        setFilteredBooks(filteredData)
+
         // console.log(event.target.elements.searchvalue.value)
     }
 
@@ -24,7 +35,7 @@ const Searchbooks = ({books, setData}) => {
                     type="submit">Search</button>
             </form>
         </div>
-    )
+   )
 }
 
 export default Searchbooks
