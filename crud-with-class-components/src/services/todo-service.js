@@ -1,7 +1,7 @@
 import httpCommon from "../http-common";
 
 class TodoService {
-    getAllTodos() {
+    getAllTodos = () => {
         return httpCommon.get("/todos");
     }
 
